@@ -15,15 +15,12 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Quiénes Somos
+        Serivicios 
       </motion.h1>
       <StyledParagraph>
-        En Q-Tap, somos un equipo apasionado por la tecnología y la innovación, con la misión de ayudar a emprendedores y empresas a digitalizarse y crecer en el mundo digital.
+        En Q-Tap ofrecemos soluciones innovadoras para digitalizar, optimizar y hacer crecer tu negocio. Desde tecnología NFC hasta desarrollo web y estrategias de marketing, te brindamos herramientas para destacar en el mundo digital.
       </StyledParagraph>
-      <StyledParagraph>
-        Nuestra experiencia en desarrollo web, impresión 3D y tecnología NFC nos permite ofrecer soluciones personalizadas y efectivas. Creemos en la simplicidad, la eficiencia y en brindar herramientas accesibles que realmente marquen la diferencia.
-      </StyledParagraph>
-
+      
       <InfoSection>
         <AnimatedCard>
           <IconWrapper>
