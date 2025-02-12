@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Rocket, Eye, Lightbulb, CheckCircle } from "lucide-react";
+import { Rocket, Eye, Lightbulb, CheckCircle, Wifi } from "lucide-react";
 import imgservicios from "../assets/servicios1.jpg";
 
-const AboutUs = () => {
+const Services = () => {
   return (
-    <AboutContainer>
+    <ServicesContainer>
       <ImageContainer>
-        <StyledImage src={imgservicios} alt="Equipo de Q-Tap" />
+        <StyledImage src={imgservicios} alt="Servicios de Q-Tap" />
       </ImageContainer>
 
       <motion.h1
@@ -15,80 +15,55 @@ const AboutUs = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        Serivicios 
+        Nuestros Servicios
       </motion.h1>
       <StyledParagraph>
         En Q-Tap ofrecemos soluciones innovadoras para digitalizar, optimizar y hacer crecer tu negocio. Desde tecnología NFC hasta desarrollo web y estrategias de marketing, te brindamos herramientas para destacar en el mundo digital.
       </StyledParagraph>
-      
-      <InfoSection>
-        <AnimatedCard>
+
+      <ServicesSection>
+        <ServiceCard>
           <IconWrapper>
-            <Rocket size={40} color="#007bff" />
+            <Wifi size={40} color="#007bff" />
           </IconWrapper>
-          <h2>Nuestra Misión</h2>
+          <h2>Q-Tap NFC</h2>
           <p>
-            Facilitar la digitalización de negocios con soluciones innovadoras, accesibles y efectivas, impulsando su crecimiento y posicionamiento en el mercado.
+            Llaveros inteligentes con tecnología NFC para compartir información de contacto, redes sociales o pagos digitales de manera instantánea y sin contacto.
           </p>
-        </AnimatedCard>
-        <AnimatedCard>
+        </ServiceCard>
+        <ServiceCard>
           <IconWrapper>
-            <Eye size={40} color="#ff5733" />
+            <Rocket size={40} color="#ff5733" />
           </IconWrapper>
-          <h2>Nuestra Visión</h2>
+          <h2>Desarrollo Web</h2>
           <p>
-            Convertirnos en un referente en tecnología NFC y soluciones digitales, ayudando a miles de emprendedores a conectar con más clientes de forma inteligente.
+            Creamos páginas web personalizadas y modernas para empresas y emprendedores, asegurando presencia digital y funcionalidad óptima.
           </p>
-        </AnimatedCard>
-      </InfoSection>
-
-      <ValuesSection>
-        <h2>Nuestros Valores</h2>
-        <ul>
-          <li>
-            <Lightbulb size={24} color="#ffcc00" /> <strong>Innovación:</strong> Siempre buscamos nuevas formas de mejorar y optimizar procesos.
-          </li>
-          <li>
-            <CheckCircle size={24} color="#28a745" /> <strong>Compromiso:</strong> Nos enfocamos en brindar un servicio de calidad, adaptado a cada cliente.
-          </li>
-          <li>
-            <CheckCircle size={24} color="#17a2b8" /> <strong>Simplicidad:</strong> Soluciones fáciles de usar, sin complicaciones innecesarias.
-          </li>
-          <li>
-            <CheckCircle size={24} color="#dc3545" /> <strong>Cercanía:</strong> Creemos en el trato personalizado y en entender realmente lo que necesitas.
-          </li>
-        </ul>
-      </ValuesSection>
-
-      <ContactText>
-        💬 ¿Te gustaría conocer más sobre cómo podemos ayudarte? ¡Contáctanos y hagamos crecer tu negocio juntos!
-      </ContactText>
-
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Transformando ideas en realidad
-      </motion.h2>
-
-      <TwoColumns>
-        <Column>
+        </ServiceCard>
+        <ServiceCard>
+          <IconWrapper>
+            <Eye size={40} color="#28a745" />
+          </IconWrapper>
+          <h2>Marketing Digital</h2>
           <p>
-            En la era digital en la que vivimos, tener una presencia en línea es esencial para cualquier empresa o negocio. Y para lograrlo, es necesario contar con un buen desarrollo de software que se adapte a las necesidades y objetivos de cada organización.
+            Estrategias digitales efectivas para redes sociales, publicidad y branding que aumentan la visibilidad y clientes potenciales.
           </p>
-        </Column>
-        <Column>
+        </ServiceCard>
+        <ServiceCard>
+          <IconWrapper>
+            <Lightbulb size={40} color="#ffcc00" />
+          </IconWrapper>
+          <h2>Impresión 3D</h2>
           <p>
-            Q-Tap se enfoca en la creación de soluciones innovadoras y de alta calidad para sus clientes, basándose en tecnología, creatividad y compromiso. La tecnología es el motor que impulsa a Q-Tap hacia el éxito.
+            Fabricación de prototipos y piezas personalizadas en 3D para innovar y optimizar procesos en diversos sectores.
           </p>
-        </Column>
-      </TwoColumns>
-    </AboutContainer>
+        </ServiceCard>
+      </ServicesSection>
+    </ServicesContainer>
   );
 };
 
-const AboutContainer = styled.div`
+const ServicesContainer = styled.div`
   text-align: center;
   padding: 8rem 2rem;
   background: #fff;
@@ -116,7 +91,7 @@ const StyledParagraph = styled.p`
   line-height: 1.6;
 `;
 
-const InfoSection = styled.div`
+const ServicesSection = styled.div`
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -124,7 +99,7 @@ const InfoSection = styled.div`
   flex-wrap: wrap;
 `;
 
-const AnimatedCard = styled(motion.div)`
+const ServiceCard = styled(motion.div)`
   background: #f9f9f9;
   padding: 2rem;
   border-radius: 12px;
@@ -155,57 +130,4 @@ const IconWrapper = styled.div`
   margin-bottom: 1rem;
 `;
 
-const ValuesSection = styled.div`
-  margin-top: 3rem;
-  text-align: left;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-`;
-
-const ContactText = styled.p`
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-`;
-
-const TwoColumns = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  text-align: left;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(1, 1fr);
-    text-align: center;
-  }
-`;
-
-const Column = styled.div`
-  background: #f8f8f8;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    background: #e3e3e3;
-  }
-`;
-
-export default AboutUs;
+export default Services;
