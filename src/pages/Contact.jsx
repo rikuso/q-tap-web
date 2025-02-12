@@ -172,7 +172,7 @@ const ContactForm = () => {
       <ContactInfo>
         <ContactCard>
           <Phone size={30} color="#004aad" />
-          <p>Teléfono: +57 123 456 7890</p>
+          <p>Teléfono: +57 311 623 1415</p>
         </ContactCard>
         <ContactCard>
           <MapPin size={30} color="#004aad" />
